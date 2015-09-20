@@ -1,0 +1,3 @@
+[submodule "extensions/company-stack-ide"]
+	path = extensions/company-stack-ide
+	url = git://github.com/drwebb/company-stack-ide.git
