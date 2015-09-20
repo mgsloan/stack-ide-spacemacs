@@ -27,16 +27,27 @@ messages).
 
 Setting this up isn't very streamlined yet:
 
+Clone [stack-ide](https://github.com/commercialhaskell/stack-ide)
+
+```
+git clone --recursive https://github.com/commercialhaskell/stack-ide.git
+```
+
+in a directory of your choice (let's call it PATH_TO_STACK_IDE). Then make sure
+to have a recent version of stack, and build stack-ide:
+
+```
+cd PATH_TO_STACK_IDE/stack-ide; stack install
+```
+
+Now add the spacemacs private layer and link the extension:
+
 ```
 git clone --recursive https://github.com/mgsloan/stack-ide-spacemacs.git ~/.emacs.d/private/stack-ide
-ln -s PATH_TO_STACK_IDE/stack-mode .emacs.d/private/stack-ide/extensions/stack-mode
+ln -s PATH_TO_STACK_IDE/stack-mode ~/.emacs.d/private/stack-ide/extensions/stack-mode
 ```
 
-where `PATH_TO_STACK_IDE` is a path to a cloned version of
-[stack-ide](https://github.com/commercialhaskell/stack-ide) (`git clone
-https://github.com/commercialhaskell/stack-ide.git`)
-
-Then, add the following to your `dotspacemacs-configuration-layers`:
+Finally, add the following to your `dotspacemacs-configuration-layers`:
 
 ```
    dotspacemacs-configuration-layers
